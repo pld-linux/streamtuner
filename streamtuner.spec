@@ -2,12 +2,13 @@ Summary:	Stream directory browser
 Summary(pl):	Przegl±darka katalogów strumieni
 Name:		streamtuner
 Version:	0.12.4
-Release:	1
+Release:	2
 License:	Free
 Group:		X11/Applications/Sound
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	9a16ab482f114301a8c1086e50a6513c
 Patch0:		%{name}-am.patch
+Patch1:		%{name}-desktop.patch
 URL:		http://www.nongnu.org/streamtuner/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -46,6 +47,7 @@ Pliki nag³ówkowe streamtuner.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 gnome-doc-common
