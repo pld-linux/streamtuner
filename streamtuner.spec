@@ -1,12 +1,12 @@
 Summary:	Stream directory browser
 Summary(pl):	Przegl±darka katalogów strumieni
 Name:		streamtuner
-Version:	0.12.5
+Version:	0.99.99
 Release:	1
 License:	Free
 Group:		X11/Applications/Sound
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	4782aa87bda0bbefbeb172ee2b3bfecf
+# Source0-md5:	2027b7c34e85b594524b0b4351c14362
 Patch0:		%{name}-am.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://www.nongnu.org/streamtuner/
@@ -18,7 +18,6 @@ BuildRequires:	gtk+2-devel >= 2:2.4.4
 BuildRequires:	libtool
 BuildRequires:	scrollkeeper
 Requires:	gtk+2 >= 2:2.4.4
-Requires:	xmms
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -56,7 +55,7 @@ gnome-doc-common
 %{__autoconf}
 %{__automake}
 %configure \
-	--enable-shoutcast=plugin
+	--with-html-dir=%{_gtkdocdir}
 %{__make}
 
 %install
@@ -82,6 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/%{name}
 %dir %{_libdir}/%{name}/plugins
 %attr(755,root,root) %{_libdir}/%{name}/plugins/*.so
+%{_datadir}/%{name}
 %{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
 %{_omf_dest_dir}/%{name}
@@ -89,4 +89,5 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %{_includedir}/%{name}
+%{_gtkdocdir}/%{name}
 %{_pkgconfigdir}/*.pc
