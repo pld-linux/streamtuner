@@ -1,6 +1,7 @@
 # TODO
 #	- segfaults with python plugin
 #	- review python plugin Requires
+#
 # Conditional build:
 %bcond_without	local_metadata
 %bcond_without	python
@@ -163,8 +164,8 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/plugins/*.{a,la}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /usr/bin/scrollkeeper-update
-%postun -p /usr/bin/scrollkeeper-update
+%post	-p /usr/bin/scrollkeeper-update
+%postun	-p /usr/bin/scrollkeeper-update
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
@@ -190,15 +191,18 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/*.pc
 
 %files live365
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/%{name}/plugins/live365.so
 %{_datadir}/%{name}/ui/live365.png
 
 %files local
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/%{name}/plugins/local.so
 %{_datadir}/%{name}/ui/local.png
 
 %if %{with python}
 %files python
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/%{name}/plugins/python.so
 %{_datadir}/%{name}/ui/python.png
 %dir %{_datadir}/%{name}/python
@@ -206,11 +210,13 @@ rm -rf $RPM_BUILD_ROOT
 %endif
 
 %files shoutcast
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/%{name}/plugins/shoutcast.so
 %{_datadir}/%{name}/ui/shoutcast.png
 
 %if %{with xiph}
 %files xiph
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/%{name}/plugins/xiph.so
 %{_datadir}/%{name}/ui/xiph.png
 %endif
