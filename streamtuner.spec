@@ -1,21 +1,16 @@
 # TODO
 #	- segfaults with python plugin
 #	- review python plugin Requires
-#	- doesn't build with all plugins disabled
-#	- local metadata bcond fix (needs local plugin)
 # Conditional build:
-%bcond_without	live365
-%bcond_without	local
-#%bcond_without	local_metadata
+%bcond_without	local_metadata
 %bcond_without	python
-%bcond_without	shoutcast
 %bcond_without	xiph
 #
 Summary:	Stream directory browser
 Summary(pl):	Przegl±darka katalogów strumieni
 Name:		streamtuner
 Version:	0.99.99
-Release:	0.1
+Release:	0.2
 License:	Free
 Group:		X11/Applications/Sound
 Source0:	http://savannah.nongnu.org/download/streamtuner/%{name}-%{version}.tar.gz
@@ -36,7 +31,7 @@ BuildRequires:	python-devel >= 1:2.3.0
 BuildRequires:	python-pygtk-devel >= 1:2.4.0
 %endif
 BuildRequires:	scrollkeeper
-#%{?with_local_metadata:BuildRequires:	taglib-devel >= 1.3}
+%{?with_local_metadata:BuildRequires:	taglib-devel >= 1.3}
 Requires:	gtk+2 >= 2:2.4.4
 Requires:	%{name}-input = %{version}-%{release}
 Conflicts:	streamtuner < %{version}
@@ -149,10 +144,8 @@ gnome-doc-common
 %{__autoconf}
 %{__automake}
 %configure \
-	%{!?with_live365:--disable-live365} \
-	%{!?with_local:--disable-local} \
+	%{!?with_local_metadata:--disable-local-metadata} \
 	%{!?with_python:--disable-python} \
-	%{!?with_shoutcast:--disable-shoutcast} \
 	%{!?with_xiph:--disable-xiph} \
 	--with-html-dir=%{_gtkdocdir}
 %{__make}
@@ -196,17 +189,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_gtkdocdir}/%{name}
 %{_pkgconfigdir}/*.pc
 
-%if %{with live365}
 %files live365
 %attr(755,root,root) %{_libdir}/%{name}/plugins/live365.so
 %{_datadir}/%{name}/ui/live365.png
-%endif
 
-%if %{with local}
 %files local
 %attr(755,root,root) %{_libdir}/%{name}/plugins/local.so
 %{_datadir}/%{name}/ui/local.png
-%endif
 
 %if %{with python}
 %files python
@@ -217,11 +206,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/python/scripts
 %endif
 
-%if %{with shoutcast}
 %files shoutcast
 %attr(755,root,root) %{_libdir}/%{name}/plugins/shoutcast.so
 %{_datadir}/%{name}/ui/shoutcast.png
-%endif
 
 %if %{with xiph}
 %files xiph
