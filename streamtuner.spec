@@ -2,7 +2,7 @@ Summary:	Stream directory browser
 Summary(pl):	Przegl±darka katalogów strumieni
 Name:		streamtuner
 Version:	0.99.99
-Release:	1
+Release:	0.1
 License:	Free
 Group:		X11/Applications/Sound
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.gz
