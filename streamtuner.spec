@@ -70,6 +70,9 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/plugins/*.{a,la}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post -p /usr/bin/scrollkeeper-update
+%postun -p /usr/bin/scrollkeeper-update
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING NEWS README TODO
