@@ -6,5 +6,5 @@ diff -urN aa/streamtuner-0.12.4/data/streamtuner.desktop.in streamtuner-0.12.4/d
  Exec=streamtuner
  Terminal=false
 -Categories=Application;AudioVideo;GTK;Tuner;
-+Categories=Audio;GTK;Tuner;
++Categories=AudioVideo;GTK;Tuner;
  StartupNotify=true
