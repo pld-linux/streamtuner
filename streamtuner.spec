@@ -202,8 +202,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/%{name}/plugins/python.so
 %{_datadir}/%{name}/ui/python.png
 %dir %{_datadir}/%{name}/python
-%{_datadir}/%{name}/python/icons
-%{_datadir}/%{name}/python/scripts
+%{_datadir}/%{name}/python/*
 %endif
 
 %files shoutcast
