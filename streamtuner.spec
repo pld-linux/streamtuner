@@ -1,7 +1,3 @@
-# TODO
-#	- segfaults with python plugin
-#	- review python plugin Requires
-#
 # Conditional build:
 %bcond_without	local_metadata
 %bcond_without	python
@@ -11,7 +7,7 @@ Summary:	Stream directory browser
 Summary(pl):	Przegl±darka katalogów strumieni
 Name:		streamtuner
 Version:	0.99.99
-Release:	0.2
+Release:	1
 License:	Free
 Group:		X11/Applications/Sound
 Source0:	http://savannah.nongnu.org/download/streamtuner/%{name}-%{version}.tar.gz
