@@ -4,7 +4,7 @@
 %bcond_without	xiph
 #
 Summary:	Stream directory browser
-Summary(pl.UTF-8):   Przeglądarka katalogów strumieni
+Summary(pl.UTF-8):	Przeglądarka katalogów strumieni
 Name:		streamtuner
 Version:	0.99.99
 Release:	1
@@ -46,7 +46,7 @@ internetowych strumieni radiowych takich jak SHOUTcast czy Live365.
 
 %package devel
 Summary:	Header files for streamtuner
-Summary(pl.UTF-8):   Pliki nagłówkowe streamtuner
+Summary(pl.UTF-8):	Pliki nagłówkowe streamtuner
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 2.4.4
@@ -59,7 +59,7 @@ Pliki nagłówkowe streamtuner.
 
 %package live365
 Summary:	Live365 plugin for streamtuner
-Summary(pl.UTF-8):   Wtyczka Live365 dla streamtunera
+Summary(pl.UTF-8):	Wtyczka Live365 dla streamtunera
 Group:		X11/Applications/Sound
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-input = %{version}-%{release}
@@ -73,7 +73,7 @@ Wtyczka Live365 dla streamtunera.
 
 %package local
 Summary:	Plugin for streamtuner providing access to local music collection
-Summary(pl.UTF-8):   Wtyczka dla streamtunera dająca dostęp do lokalnej kolekcji muzyki
+Summary(pl.UTF-8):	Wtyczka dla streamtunera dająca dostęp do lokalnej kolekcji muzyki
 Group:		X11/Applications/Sound
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-input = %{version}-%{release}
@@ -90,7 +90,7 @@ Vorbis.
 
 %package python
 Summary:	Plugin for streamtuner providing an embedded Python interpreter
-Summary(pl.UTF-8):   Wtyczka dla streamtunera dostarczająca wbudowany interpreter Pythona
+Summary(pl.UTF-8):	Wtyczka dla streamtunera dostarczająca wbudowany interpreter Pythona
 Group:		X11/Applications/Sound
 Requires:	%{name} = %{version}-%{release}
 Conflicts:	streamtuner-python < %{version}
@@ -103,7 +103,7 @@ Wtyczka dla streamtunera dostarczająca wbudowany interpreter Pythona.
 
 %package shoutcast
 Summary:	SHOUTcast plugin for streamtuner
-Summary(pl.UTF-8):   Wtyczka SHOUTcast dla streamtunera
+Summary(pl.UTF-8):	Wtyczka SHOUTcast dla streamtunera
 Group:		X11/Applications/Sound
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-input = %{version}-%{release}
@@ -117,7 +117,7 @@ Wtyczka SHOUTcast dla streamtunera.
 
 %package xiph
 Summary:	Plugin for streamtuner implementing a dir.xiph.org handler
-Summary(pl.UTF-8):   Wtyczka dla streamtunera implementująca obsługę dir.xiph.org
+Summary(pl.UTF-8):	Wtyczka dla streamtunera implementująca obsługę dir.xiph.org
 Group:		X11/Applications/Sound
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-input = %{version}-%{release}
