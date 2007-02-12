@@ -4,7 +4,7 @@
 %bcond_without	xiph
 #
 Summary:	Stream directory browser
-Summary(pl):	Przegl±darka katalogÛw strumieni
+Summary(pl.UTF-8):   PrzeglƒÖdarka katalog√≥w strumieni
 Name:		streamtuner
 Version:	0.99.99
 Release:	1
@@ -39,14 +39,14 @@ Streamtuner is a stream directory browser. Through the use of a plugin
 system, it offers an intuitive GTK+2 interface to Internet radio
 directories such as SHOUTcast and Live365.
 
-%description -l pl
-Streamtuner jest przegl±dark± katalogÛw strumieni. DziÍki systemowi
-wtyczek program oferuje intuicyjny interfejs GTK+2 do katalogÛw
+%description -l pl.UTF-8
+Streamtuner jest przeglƒÖdarkƒÖ katalog√≥w strumieni. Dziƒôki systemowi
+wtyczek program oferuje intuicyjny interfejs GTK+2 do katalog√≥w
 internetowych strumieni radiowych takich jak SHOUTcast czy Live365.
 
 %package devel
 Summary:	Header files for streamtuner
-Summary(pl):	Pliki nag≥Ûwkowe streamtuner
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe streamtuner
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 2.4.4
@@ -54,12 +54,12 @@ Requires:	glib2-devel >= 2.4.4
 %description devel
 Header files for streamtuner.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe streamtuner.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe streamtuner.
 
 %package live365
 Summary:	Live365 plugin for streamtuner
-Summary(pl):	Wtyczka Live365 dla streamtunera
+Summary(pl.UTF-8):   Wtyczka Live365 dla streamtunera
 Group:		X11/Applications/Sound
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-input = %{version}-%{release}
@@ -68,12 +68,12 @@ Conflicts:	streamtuner-live365 < %{version}
 %description live365
 Live365 plugin for streamtuner.
 
-%description live365 -l pl
+%description live365 -l pl.UTF-8
 Wtyczka Live365 dla streamtunera.
 
 %package local
 Summary:	Plugin for streamtuner providing access to local music collection
-Summary(pl):	Wtyczka dla streamtunera daj±ca dostÍp do lokalnej kolekcji muzyki
+Summary(pl.UTF-8):   Wtyczka dla streamtunera dajƒÖca dostƒôp do lokalnej kolekcji muzyki
 Group:		X11/Applications/Sound
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-input = %{version}-%{release}
@@ -83,14 +83,14 @@ Conflicts:	streamtuner-local < %{version}
 Plugin providing access to your local music collection. It can read
 and modify ID3 and Vorbis metadata.
 
-%description local -l pl
-Wtyczka dla streamtunera daj±ca dostÍp do lokalnej kolekcji muzyki.
-DziÍki tej wtyczce moøna odczytywaÊ i modyfikowaÊ metadane ID3 i
+%description local -l pl.UTF-8
+Wtyczka dla streamtunera dajƒÖca dostƒôp do lokalnej kolekcji muzyki.
+Dziƒôki tej wtyczce mo≈ºna odczytywaƒá i modyfikowaƒá metadane ID3 i
 Vorbis.
 
 %package python
 Summary:	Plugin for streamtuner providing an embedded Python interpreter
-Summary(pl):	Wtyczka dla streamtunera dostarczaj±ca wbudowany interpreter Pythona
+Summary(pl.UTF-8):   Wtyczka dla streamtunera dostarczajƒÖca wbudowany interpreter Pythona
 Group:		X11/Applications/Sound
 Requires:	%{name} = %{version}-%{release}
 Conflicts:	streamtuner-python < %{version}
@@ -98,12 +98,12 @@ Conflicts:	streamtuner-python < %{version}
 %description python
 Plugin for streamtuner providing an embedded Python interpreter.
 
-%description python -l pl
-Wtyczka dla streamtunera dostarczaj±ca wbudowany interpreter Pythona.
+%description python -l pl.UTF-8
+Wtyczka dla streamtunera dostarczajƒÖca wbudowany interpreter Pythona.
 
 %package shoutcast
 Summary:	SHOUTcast plugin for streamtuner
-Summary(pl):	Wtyczka SHOUTcast dla streamtunera
+Summary(pl.UTF-8):   Wtyczka SHOUTcast dla streamtunera
 Group:		X11/Applications/Sound
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-input = %{version}-%{release}
@@ -112,12 +112,12 @@ Conflicts:	streamtuner < %{version}
 %description shoutcast
 SHOUTcast plugin for streamtuner.
 
-%description shoutcast -l pl
+%description shoutcast -l pl.UTF-8
 Wtyczka SHOUTcast dla streamtunera.
 
 %package xiph
 Summary:	Plugin for streamtuner implementing a dir.xiph.org handler
-Summary(pl):	Wtyczka dla streamtunera implementuj±ca obs≥ugÍ dir.xiph.org
+Summary(pl.UTF-8):   Wtyczka dla streamtunera implementujƒÖca obs≈Çugƒô dir.xiph.org
 Group:		X11/Applications/Sound
 Requires:	%{name} = %{version}-%{release}
 Provides:	%{name}-input = %{version}-%{release}
@@ -126,8 +126,8 @@ Conflicts:	streamtuner-xiph < %{version}
 %description xiph
 Plugin for streamtuner implementing a dir.xiph.org handler.
 
-%description xiph -l pl
-Wtyczka dla streamtunera implementuj±ca obs≥ugÍ dir.xiph.org.
+%description xiph -l pl.UTF-8
+Wtyczka dla streamtunera implementujƒÖca obs≈Çugƒô dir.xiph.org.
 
 %prep
 %setup -q
