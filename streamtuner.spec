@@ -7,7 +7,7 @@ Summary:	Stream directory browser
 Summary(pl.UTF-8):	Przeglądarka katalogów strumieni
 Name:		streamtuner
 Version:	0.99.99
-Release:	1
+Release:	2
 License:	Free
 Group:		X11/Applications/Sound
 Source0:	http://savannah.nongnu.org/download/streamtuner/%{name}-%{version}.tar.gz
@@ -31,7 +31,6 @@ BuildRequires:	scrollkeeper
 %{?with_local_metadata:BuildRequires:	taglib-devel >= 1.3}
 Requires:	gtk+2 >= 2:2.4.4
 Requires:	%{name}-input = %{version}-%{release}
-Conflicts:	streamtuner < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
